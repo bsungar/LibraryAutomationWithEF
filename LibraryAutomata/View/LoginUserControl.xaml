@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="LibraryAutomata.View.LoginUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:LibraryAutomata.View" xmlns:navigation="clr-namespace:LibraryAutomata.Navigation" xmlns:viewmodel="clr-namespace:LibraryAutomata.Navigation" xmlns:viewmodel1="clr-namespace:LibraryAutomata.viewmodel" d:DataContext="{d:DesignInstance Type=viewmodel1:Loginviewmodel}"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid Background="Aquamarine">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="8*"></ColumnDefinition>
+            <ColumnDefinition Width="8*"></ColumnDefinition>
+            <ColumnDefinition Width="8*"></ColumnDefinition>
+            <ColumnDefinition Width="8*"></ColumnDefinition>
+            <ColumnDefinition Width="8*"></ColumnDefinition>
+            <ColumnDefinition Width="8*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="4*"></RowDefinition>
+            <RowDefinition Height="4*"></RowDefinition>
+            <RowDefinition Height="4*"></RowDefinition>
+            <RowDefinition Height="4*"></RowDefinition>
+            <RowDefinition Height="4*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <TextBlock x:Name="txt" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Center" FontSize="22" Foreground="MediumPurple" VerticalAlignment="Center" Grid.ColumnSpan="2" Text="LOGIN"></TextBlock>
+        <TextBlock x:Name="mail" Grid.Row="1" Grid.Column="1" Text="E-Mail:" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="16" Foreground="MediumPurple"></TextBlock>
+        <TextBlock x:Name="pass" Grid.Row="2" Grid.Column="1" Text="Password:" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="16" Foreground="MediumPurple"></TextBlock>
+        <TextBox x:Name="mailenter" Text ="{Binding Email}" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="1" VerticalAlignment="Center" HorizontalContentAlignment="Center"></TextBox>
+        <TextBox x:Name="passenter" Text ="{Binding Password}" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="1" VerticalAlignment="Center" HorizontalContentAlignment="Center"></TextBox>
+        <Button x:Name="tosign" Command="{Binding Path= LoginCommand}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content=" Go Sign In" Grid.Row="3" Grid.Column="3" FontSize="11" VerticalAlignment="Top" Height="40" Margin="73,0,0,0"/>
+        <Button x:Name="loginbutton" Command ="{Binding Path= LoginCommand}" Content="Enter" Width="60" Height="40" Grid.Row="3" Grid.Column="3" HorizontalAlignment="Left" VerticalAlignment="Top"  ></Button>
+    </Grid>
+</UserControl>
